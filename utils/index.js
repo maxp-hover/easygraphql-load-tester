@@ -53,13 +53,13 @@ function create(schema, query, selectedQueries, args, isMutation) {
     nestedType.fields.forEach((field) => {
       const createdField = getField(field, schema)
       fields.push(createdField)
-
-      const queryToTest = createQueryToTest(fields, queryHeader, isMutation)
-
-      queriesToTest.push(queryToTest)
     })
-  }
 
+    const queryToTest = createQueryToTest(fields, queryHeader, isMutation)
+
+    queriesToTest.push(queryToTest)
+  }
+  
   return queriesToTest
 }
 
