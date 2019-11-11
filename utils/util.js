@@ -64,6 +64,7 @@ function createQueryArguments(args, userArgs) {
     } else {
       userArg = selectedArg
     }
+    console.log("using forked easygraphql-load-tester")
     if (
       userArg != undefined &&
       userArg != '"undefined"'
