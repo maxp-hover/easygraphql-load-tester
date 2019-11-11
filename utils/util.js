@@ -64,8 +64,12 @@ function createQueryArguments(args, userArgs) {
     } else {
       userArg = selectedArg
     }
-
-    queryArgs.push(`${arg.name}: ${userArg}`)
+    if (
+      userArg != undefined &&
+      userArg != '"undefined"'
+    ) {
+      queryArgs.push(`${arg.name}: ${userArg}`)
+    }
   })
 
   let test = queryArgs.join(', ')
